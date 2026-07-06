@@ -1,4 +1,4 @@
-# PandaPlacer Cam Feeder
+# Cam Feeder for PandaPlacer
 
 Custom 3D-printable SMT tape feeder system for the PandaPlacer / PandaPlacer CC1 pick-and-place machine.
 
