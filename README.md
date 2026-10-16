@@ -9,7 +9,7 @@ Custom 3D-printable SMT tape feeder system for the PandaPlacer / PandaPlacer CC1
 
 ## Why I Designed This Feeder
 
-When I received my PandaPlacer, I first tried to build and use the original feeder design. The original feeder uses a foot that engages with the holes of the SMT tape, pulls the tape forward, and then retracts by sliding over the tape.
+When I received my PandaPlacer, I first tried to build and use the original Bamboo Feeder design. The original feeder uses a foot that engages with the holes of the SMT tape, pulls the tape forward, and then retracts by sliding over the tape.
 
 In my build, I had difficulty making this work reliably. The mechanism depends a lot on the correct friction during the retracting movement. The cover tape pulling mechanism also relies on friction between 3D printed parts and an O-ring.
 
@@ -104,57 +104,11 @@ Main functions:
 * Sends a pulse to start the selected feeder
 * Waits until the previous feeder motion is completed before sending the next pulse
 * Reads the feeder busy / completed signal
-* Controls a Padauk microcontroller programming socket
+* Controls a servo to open/close a programming socket
+* Controls a Padauk programmer to trigger start programming and read the Programming OK/Fail status line
+* Controls a DC motor for a vibration tube feeder
 
 The programming socket is intended for a workflow where the main controller operates a servo to pull the socket, sends a signal to the Padauk programmer, waits for the microcontroller to be programmed, and then the pick-and-place machine picks the programmed microcontroller and places it on the PCB.
-
----
-
-## Repository Contents
-
-Planned repository structure:
-
-```text
-mechanical/
-  STL files
-  STEP files
-  source CAD files
-
-electronics/
-  feeder PCB
-  feeder controller board
-  main controller board
-  schematics
-  PCB files
-  BOM
-
-firmware/
-  Arduino Nano main controller code
-
-docs/
-  photos
-  assembly notes
-  wiring notes
-  testing notes
-```
-
----
-
-## Notes
-
-This project is experimental. The design may still change after testing.
-
-Before building or using it, please check:
-
-* Motor direction
-* Limit switch timing
-* Tape advance accuracy
-* Cover tape pulling reliability
-* 12 V and 5 V wiring
-* Controller signals
-* Mechanical fit on the PandaPlacer rail
-
----
 
 ## Disclaimer
 
